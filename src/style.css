@@ -1,0 +1,116 @@
+html * {
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+}
+
+body {
+	margin: auto;
+	overflow: hidden;
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-end;
+	font-family: Verdana;
+	font-weight: 700;
+}
+
+.container {
+	display: flex;
+	flex-flow: column;
+}
+
+.player {
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	left: 0;
+	transition: all 0.3s ease;
+	border: 1px solid #333;
+}
+
+.ground {
+    height: 10px;
+    width: 100vw;
+    background: brown;
+}
+
+.left {
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	background: #555;
+	border: 1px solid #333;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	place-items: center;
+	color: #fff;
+	font-size: 2rem;
+	opacity: 0.3;
+	border-radius: 10px;
+}
+
+.right {
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	background: #555;
+	border: 1px solid #333;
+	display: flex;
+	justify-content: center;
+	place-items: center;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 2rem;
+	opacity: 0.3;
+	border-radius: 10px;
+}
+
+.menu {
+	position: fixed;
+	height: 80vh;
+	width: 80vw;
+	background: #eee;
+	border: 1px solid rgb(220, 220, 220);
+	border-radius: 4px;
+	display: none;
+	flex-flow: column;
+	place-items: center;
+	justify-content: center;
+	justify-content: space-around;
+	top: 10%;
+	left: 10%;
+	transition: all 0.5s ease;
+}
+
+.restart {
+	height: 50px;
+	width: 200px;
+	background: rgb(220, 220, 220);
+	display: flex;
+	justify-content: center;
+	place-items: center;
+	border-radius: 4px;
+	box-shadow: 0 3px 0 rgb(200, 200, 200);
+	transition: all 0.5s ease;
+}
+
+.restart:hover {
+	box-shadow: none;
+}
+
+.stats {
+    position: absolute;
+    top: 10;
+    display: flex;
+    justify-content: space-between;
+    width: 95vw;
+}
+
+@media (orientation: portrait) {
+	.player {
+		top: 88vh;
+	}
+}
